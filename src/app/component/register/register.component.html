@@ -1,0 +1,143 @@
+<div class="main-div" >
+    <div fxLayoutAlign="center center">
+    <mat-card >
+        <div  fxLayout="row" fxLayoutAlign="center center">
+            <form [formGroup]="registerform" (ngSubmit)="ngSubmit()">
+                <div class="column">
+                    <div class="img1">
+                        <mat-card-title>
+                            <span style="color: #4285F4;">F</span>
+                            <span style="color: #EA4335;">u</span>
+                            <span style="color: #FBBC05;">n</span>
+                            <span style="color: #4285F4;">d</span>
+                            <span style="color: #34A853;">o</span>
+                            <span style="color: #EB4E41;">o</span>
+                          </mat-card-title>
+                    </div>
+                    <div>
+                        <h1>Create Your Google Account</h1>
+                    </div>
+                    <div class="row-names">
+                        <div class="first-col" fxLayoutGap="10px">
+                            <mat-form-field appearance="outline">
+                                <mat-label>First Name</mat-label>
+                                <input formControlName="firstname" matInput placeholder=""  >
+                                <mat-hint style="color: red;" *ngIf="f.firstname.invalid && f.firstname.touched">
+                                    Firstname is required</mat-hint>
+                                
+                            </mat-form-field>
+                           
+
+                            <mat-form-field appearance="outline">
+                                <mat-label>Last Name</mat-label>
+                                <input formControlName="lastname" matInput placeholder="" >
+                                <mat-hint style="color: red;" *ngIf="f.lastname.invalid && f.lastname.touched">
+                                    Lastname is required</mat-hint>
+                               
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div>
+                        <mat-form-field appearance="outline" [style.width.%]="100">
+                            <mat-label>Username</mat-label>
+                            <input formControlName="email" type="email" matInput placeholder="">
+                            <mat-hint style="color: red;" *ngIf="f.email.invalid && f.email.touched">
+                                Passsword is required</mat-hint>
+                            </mat-form-field>
+                    </div>
+                    <mat-hint class="hint">You can use letters,numbers & periods</mat-hint>
+                    <div class="row-pass" fxLayoutGap="10px">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input formControlName="password" [type]="showPassword?'text':'password'" matInput placeholder="">
+                            <mat-hint style="color: red;" *ngIf="f.password.invalid && f.password.touched">
+                                Passsword is required</mat-hint>
+                           
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Confirm</mat-label>
+                            <input formControlName="confirm" [type]="showPassword?'text':'password'" matInput placeholder="">
+                            <mat-hint style="color: red;" *ngIf="f.confirm.invalid && f.confirm.touched">
+                               password and confirm password must match </mat-hint>
+                            
+                        </mat-form-field>
+                    </div>
+                    <div class="check-box">
+                        <section class="checkbox" >
+                            <mat-checkbox  color="primary" (click)="toggleShowPassword()">
+                                Show password</mat-checkbox>
+                        </section>
+                    </div>
+                    <div class="row-btn" fxLayout="row" fxLayoutGap="200px">
+                        <div class="sign-instead">
+                           
+                            <button  mat-button href="http://localhost:4200/register" target="_blank" style="color: #1a73e8;">Sign in instead</button>
+                        </div>
+                        <div class="nextBtn">
+                            <button type="submit" mat-raised-button class="button-next" color="primary">Register</button>                     
+                           </div>
+                    </div>
+                </div>
+            </form>
+            <div class="image" fxLayout="column">
+                <img src="../../../assets/images/account.svg">
+                <figcaption class="figcap">One account. All of Fundoo working for you.</figcaption>
+            </div>
+        </div>
+    </mat-card>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- <div class="body" fxLayout="" fxLayoutAlign="center center">
+    <mat-card class="mat" fxFlex=60 fxFlex.xs=95 fxFlex.sm=20 fxLayoutAlign="center center">
+        <div fxLayout="row">
+            <form class="form"> 
+                <div fxLayout="row">
+                    <span id="G">F</span>
+                    <span id="o1">u</span>
+                    <span id="o2">n</span>
+                    <span id="g">d</span>
+                    <span id="l">o</span>
+                    <span id="e">o</span>
+                </div>
+                <div>
+                <h1>Create Your Google Account</h1>
+                </div>
+                <div fxLayout="row">
+                    <div fxLayoutGap="10px">
+                        <mat-form-field appearance="outline">
+                            <mat-label>First Name</mat-label>
+                            <input formControlName="firstname" matInput placeholder="">
+                        </mat-form-field>
+    
+                        <mat-form-field appearance="outline">
+                            <mat-label>Last Name</mat-label>
+                            <input formControlName="lastname" matInput placeholder="">
+                        </mat-form-field>
+                    </div>
+                </div> 
+                <div>
+                    <mat-form-field appearance="outline" [style.width.%]="100">
+                        <mat-label>Username</mat-label>
+                        <input formControlName="email" type="email" matInput placeholder="">
+                    </mat-form-field>
+                </div>
+            </form>
+            <div fxHide.sm>
+                <div class="image" fxLayoutGap="10px">
+                    <img src="../../../assets/images/account.svg">
+                        <figcaption class="figcap">One account. All of Fundoo working for you.</figcaption>
+                </div>
+            </div>
+        </div>
+
+    </mat-card>
+</div>-->

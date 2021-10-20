@@ -1,0 +1,37 @@
+.icon {
+  opacity: 0.5;
+}
+
+.icon:hover {
+  background-color: #c0c0c0;
+  opacity: 0.71;
+}
+
+.colors:hover {
+  border: 0.9px solid black;
+}
+
+::ng-deep .mat-menu-panel {
+  width: 113px;
+  height: 103px;
+}
+
+::ng-deep .mat-menu-content {
+  display: flex !important;
+  align-items: center !important;
+  flex-flow: wrap !important;
+  padding: 0px !important;
+  margin: 0px !important;
+  margin-left: 6px !important;
+}
+
+::ng-deep .mat-menu-item .mat-icon {
+  font-size: 25px;
+  margin-right: 12px !important;
+  vertical-align: baseline !important;
+}
+
+::ng-deep .mat-menu-item {
+  line-height: 0px !important;
+  height: 32px !important;
+}

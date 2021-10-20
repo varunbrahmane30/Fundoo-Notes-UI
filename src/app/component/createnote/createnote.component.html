@@ -1,0 +1,32 @@
+<mat-expansion-panel hideToggle class="createnote" fxLayout="column" fxLayoutAlign="space-around stretch">
+  <mat-expansion-panel-header>
+    <mat-panel-title style="align-items: center">
+      <input class="title" matInput placeholder="Title" [(ngModel)]="Title" />
+      <!-- <textarea class="title" matInput placeholder="Title" [(ngModel)]="Title" cdkTextareaAutosize
+        cdkAutosizeMinRows="2" cdkAutosizeMaxRows="3"></textarea> -->
+    </mat-panel-title>
+    <mat-panel-description style="flex-grow: 0; opacity: 0.5">
+      <button mat-icon-button>
+        <img src="../../../assets/images/check_box_black_24dp.svg" />
+      </button>
+      <button mat-icon-button>
+        <img src="../../../assets/images/brush_black_24dp.svg" />
+      </button>
+      <button mat-icon-button>
+        <img src="../../../assets/images/image.svg" />
+      </button>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <textarea matInput placeholder="Take a note" [(ngModel)]="Message" cdkTextareaAutosize cdkAutosizeMinRows="2"
+    cdkAutosizeMaxRows="10"></textarea>
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <div fxFlex="80" class="icon">
+      <app-icons></app-icons>
+    </div>
+    <div fxFlex="20" class="btn" fxFlex="row">
+      <button class="closebutton" (click)="noteCreate()" mat-button target="_blank">
+        Close
+      </button>
+    </div>
+  </div>
+</mat-expansion-panel>

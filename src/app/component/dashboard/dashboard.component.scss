@@ -1,0 +1,68 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+
+.searchBar {
+  width: 50%;
+  margin-left: 100px;
+  font-weight: 300;
+}
+
+.example-is-mobile .example-toolbar {
+  position: fixed;
+  z-index: 2;
+}
+
+h1.example-app-name {
+  margin-left: 8px;
+}
+
+.example-sidenav-container {
+  flex: 1;
+}
+
+.example-is-mobile .example-sidenav-container {
+  flex: 1 0 auto;
+}
+.icon-button {
+  padding-right: 30px;
+}
+.icons {
+  margin: 70%;
+}
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+  background-color: white;
+  border-bottom: 1px solid gray;
+}
+::ng-deep {
+  .mat-drawer-content {
+    overflow: hidden !important;
+  }
+}
+
+.mat-button-toggle-group {
+  margin-left: 12px;
+}
+.sidenav-container {
+  background-color: white;
+  height: 100%;
+}
+
+.nav-list:hover {
+  //border-radius: 200px;
+  background-color: #fed8b1;
+  border-top-right-radius: 200px;
+  border-bottom-right-radius: 200px;
+}
+
+.app-button {
+  opacity: 0.5;
+}

@@ -1,0 +1,20 @@
+<div class="note" fxFlex="row">
+  <div fxLayoutAlign="end end">
+    <input matInput class="title" [(ngModel)]="title" />
+  </div>
+  <div>
+    <textarea style="padding: 10px" matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="20"
+      [(ngModel)]="message"></textarea>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="space-between end">
+    <div fxFlex="70">
+      <app-icons></app-icons>
+    </div>
+    <div><button mat-icon-button [mat-dialog-close] (click)="updateNote()" mat-button target="_blank"
+        style="opacity: 0.9;">
+        Close
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="mat" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="32px" fxLayoutAlign="center">
+  <mat-card [style.padding.%]="5" fxFlex="0 1 calc(33.3% - 32px)" fxFlex.lt-md="0 1 calc(50% - 32px)" fxFlex.sm="100%">
+    <form [formGroup]="login" (ngSubmit)="onSubmit()" fxLayoutAlign="center center">
+      <div>
+        <div fxLayoutAlign="center center">
+          <div>
+            <div>
+              <mat-card-title [style.padding-bottom.%]="20">
+                <span style="color: #4285F4;">F</span>
+                <span style="color: #EA4335;">u</span>
+                <span style="color: #FBBC05;">n</span>
+                <span style="color: #4285F4;">d</span>
+                <span style="color: #34A853;">o</span>
+                <span style="color: #EB4E41;">o</span>
+              </mat-card-title>
+            </div>
+          </div>
+        </div>
+        <mat-card-title [style.padding-bottom.%]="5" fxLayoutAlign="center center">Sign in</mat-card-title>
+        <h1 fxLayoutAlign="center center">Use your Fundoo Account</h1>
+        <div class="username">
+          <mat-form-field appearance="outline" [style.width.%]="100">
+            <mat-label>Username</mat-label>
+            <input type="email" matInput placeholder="" formControlName="email">
+            <mat-hint style="color: red;" *ngIf="f.email.invalid && f.email.touched">
+              Email is required
+            </mat-hint>
+          </mat-form-field>
+        </div>
+
+        <div class="password">
+          <mat-form-field appearance="outline" [style.width.%]="100">
+            <mat-label>Password</mat-label>
+            <input [type]="showPassword?'text':'password'" matInput placeholder="" formControlName="password">
+            <mat-hint style="color: red;" *ngIf="f.password.invalid && f.password.touched">
+              Password is required</mat-hint>
+          </mat-form-field>
+        </div>
+        <div class="showpassword">
+          <mat-checkbox color="primary" (click)="toggleShowPassword()">
+            Show password</mat-checkbox>
+        </div>
+        <div style="margin-top: 5%; margin-left: -2vh;">
+          <a mat-button href="http://localhost:4200/forgotpassword" target="_blank" style="color: #1a73e8;">Forgot
+            Password?</a>
+        </div>
+        <div fxLayoutAlign="start center" fxLayoutGap="220px" style="margin-top: 5%; margin-left: -2vh;">
+          <a mat-button href="http://localhost:4200/register" target="_blank" style="color: #1a73e8;">Create Account</a>
+          <button mat-raised-button class="button-next" color="primary" (click)="onSubmit()">Sign in</button>
+        </div>
+        </div>
+    </form>
+  </mat-card>
+</div>

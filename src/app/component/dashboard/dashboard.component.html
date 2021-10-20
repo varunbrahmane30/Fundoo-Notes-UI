@@ -1,0 +1,120 @@
+<div>
+  <mat-toolbar class="example-toolbar">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <img src="../../../assets/images/keep.png" />
+    <h1 class="example-app-name">Fundoo</h1>
+
+    <mat-form-field class="searchBar">
+      <mat-label>Search</mat-label>
+      <input matInput [(ngModel)]="value" />
+
+      <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value = ''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <span class="spacebetween" style="flex: 1 1 auto"></span>
+    <button mat-icon-button class="app-button">
+      <!-- <mat-icon>refresh</mat-icon> -->
+    </button>
+    <button mat-icon-button class="app-button">
+      <img src="../../../assets/images/view_agenda_black_24dp.svg">
+    </button>
+    <button mat-icon-button class="app-button">
+      <img src="../../../assets/images/settings_black_24dp.svg">
+    </button>
+    <span class="spacebetween" style="flex: 1 1 auto"></span>
+    <button mat-icon-button class="app-button">
+      <img src="../../../assets/images/apps_black_24dp.svg">
+    </button>
+    <button mat-icon-button class="app-button" [matMenuTriggerFor]="menu">
+      <img src="../../../assets/images/account_circle_black_24dp.svg">
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="logout()">Logout</button>
+      </mat-menu>
+    </button>
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlex.xs="100%" class="sidenav-container">
+    <mat-sidenav mode="side" #snav style="width: 250px; border: none;">
+      <mat-nav-list>
+        <a mat-list-item (click)="getNotes()" class="nav-list"><img class="icon-button"
+            src="../../../assets/images/lightbulb_black_24dp.svg" />Notes</a>
+
+        <a mat-list-item class="nav-list"><img class="icon-button"
+            src="../../../assets/images/notifications_black_24dp.svg" />Reminders</a>
+
+        <a mat-list-item class="nav-list"><img class="icon-button"
+            src="../../../assets/images/edit_black_24dp.svg" />Edit Labels</a>
+
+        <a mat-list-item (click)="getArchiveNotes()" class="nav-list"><img class="icon-button"
+            src="../../../assets/images/archive.svg" />
+          Archive</a>
+
+        <a mat-list-item (click)="getAllBinNotes()" class="nav-list"><img class="icon-button"
+            src="../../../assets/images/delete_outline_black_24dp.svg" />Bin</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
+<!-- <div>
+    <div>
+        <mat-toolbar class="toolbar">
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                <mat-icon type="button" mat-button (click)="drawer.toggle()">menu</mat-icon>
+            </button>
+           
+            
+            <span>Fundoo Notes</span>
+            <span class="example-spacer"></span>
+            
+            <div class="searchbar">
+                <mat-icon>search</mat-icon>
+                <input class="form-control" type="search" mdbInput placeholder="search">
+              </div>
+            <button mat-icon-button class="example-icon"  aria-label="Example icon-button with refresh">
+                <mat-icon>refresh</mat-icon>
+            </button>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with listview">
+                <mat-icon>listview</mat-icon>
+            </button>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with settings">
+                <mat-icon>settings</mat-icon>
+            </button>
+        </mat-toolbar>
+    </div>
+
+    <div>
+        <mat-drawer-container class="example-container" autosize>
+            <mat-drawer #drawer class="example-sidenav" mode="side">
+                <mat-list role="list" fxLayout="column">
+                    <button mat-icon-button>
+                        <span><mat-icon>info</mat-icon><a>Remainder</a></span>
+                     </button>
+                     <button mat-icon-button>
+                        <span><mat-icon>info</mat-icon><a>Trash</a></span>
+                     </button>
+                     <button mat-icon-button>
+                        <span><mat-icon>info</mat-icon><a>Bin</a></span>
+                     </button>
+                  </mat-list>
+
+
+            </mat-drawer>
+
+            <div class="example-sidenav-content">
+
+                <button type="button" mat-button (click)="drawer.toggle()">
+                    
+                </button>
+            </div>
+
+        </mat-drawer-container>
+    </div>
+</div> -->

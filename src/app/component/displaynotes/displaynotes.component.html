@@ -1,0 +1,21 @@
+<div class="note">
+  <mat-card class="matcard" *ngFor="let i of noteArray" [style.background]="i?.color">
+    <div id="checked">
+      <button class="icon" mat-icon-button>
+        <img src="../../../assets/images/check_circle_black_24dp.svg" />
+      </button>
+    </div>
+    <div class="title" (click)="openDialog(i)">
+      {{ i.title }}
+    </div>
+    <div class="title" (click)="openDialog(i)" style="padding-top: 20px">
+      <textarea style="overflow: hidden" matInput cdkTextareaAutosize cdkAutosizeMinRows="2"
+        cdkAutosizeMaxRows="10">{{ i.message }}</textarea>
+    </div>
+    <mat-card-content class="icon">
+      <app-icons [note]="i" (noteUpdated)="updatedData($event)" class="icon-visible"></app-icons>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<!-- [rows]=5 -->

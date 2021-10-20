@@ -1,0 +1,9 @@
+<div fxFlexLayout="column" fxLayoutAlign="center center">
+  <app-createnote
+    fxLayoutAlign="center center"
+    (noteCreated)="dataRecived($event)"
+  ></app-createnote>
+</div>
+<div fxLayoutAlign="center center" class="displaynote">
+  <app-displaynotes (noteUpdated)="updatedData($event)" (operation)="updatedData($event)" [noteArray]="noteList"></app-displaynotes>
+</div>

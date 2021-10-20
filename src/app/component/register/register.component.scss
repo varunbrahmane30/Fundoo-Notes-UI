@@ -1,0 +1,73 @@
+.main-div{
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px;
+}
+// .form{
+//     border: 1px solid;
+//     border-color: gainsboro;
+//     border-radius: 8px;
+//     height: auto;
+//     width: auto;
+//     padding: 40px;
+// }
+.error{
+    color: #FF0000;
+}
+.email-col{
+    padding-bottom: 0px;
+    //margin-bottom:-20px ;
+}
+.hint{
+    padding-top: -19px;
+}
+.image{
+    width: 244px;
+    height: 244px;
+    margin-left: 30px;
+}
+.figcap{
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 10px;
+}
+.img1{
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    padding-bottom: 16px;
+    width: 100px;
+    height: 24px;
+}
+#G{
+    padding-right:5px;
+    color: #1976d2;
+}
+#o1{
+    padding-right:5px;
+    
+    color: #FF0000;
+}
+#o2{
+    padding-right:5px;
+   
+    color: #FFD700;
+}
+#g{
+    padding-right:5px;
+   
+    color: #1976d2;
+}#l{
+    padding-right:5px;
+   
+    color: #FF0000;
+}
+#e{
+    
+    color: #006400;
+}
+.row-btn{
+    display: flex;
+    padding-top: 30px;
+}
+

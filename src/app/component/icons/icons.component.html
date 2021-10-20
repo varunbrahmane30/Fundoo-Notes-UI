@@ -1,0 +1,50 @@
+<div class="show">
+  <button class="icon" *ngIf="!isBined" mat-icon-button>
+    <img src="../../../assets/images/more.svg" />
+  </button>
+  <button class="icon" (click)="openDialog()" *ngIf="!isBined" mat-icon-button>
+    <img src="../../../assets/images/person_add_alt_black_24dp.svg" />
+  </button>
+
+  <button mat-icon-button *ngIf="!isBined" [matMenuTriggerFor]="aboveMenu">
+    <img class="icon" src="../../../assets/images/color.svg" alt="palette" />
+  </button>
+  <mat-menu class="listofcolor" #aboveMenu="matMenu" yPosition="above">
+    <div *ngFor='let c of colors'>
+      <button class="colors" mat-menu-item (click)="setColor(c)">
+        <mat-icon [ngStyle]="{color:c}">circle</mat-icon>
+      </button>
+    </div>
+  </mat-menu>
+
+
+  <button class="icon" *ngIf="!isBined" mat-icon-button>
+    <img src="../../../assets/images/image.svg" />
+  </button>
+  <button class="icon" (click)="archiveNote()" *ngIf="!isArchived && !isBined" mat-icon-button>
+    <img src="../../../assets/images/archive.svg" />
+  </button>
+
+  <button class="icon" (click)="archiveNote()" *ngIf="isArchived" mat-icon-button>
+    <img src="../../../assets/images/unarchive_black_24dp.svg" />
+  </button>
+
+  <button class="icon" *ngIf="!isBined" mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="binNote()">Delete Note</button>
+      <button mat-menu-item>Add Label</button>
+      <button mat-menu-item>Add drowing</button>
+      <button mat-menu-item>Make a copy</button>
+      <button mat-menu-item>Show tick boxes</button>
+    </mat-menu>
+    <img src="../../../assets/images/more_vert_black_24dp.svg" />
+  </button>
+
+  <button class="icon" (click)="binNote()" *ngIf="isBined" mat-icon-button>
+    <img src="../../../assets/images/restore_from_trash_black_24dp.svg" />
+  </button>
+
+  <button class="icon" (click)="deleteNote()" *ngIf="isBined" mat-icon-button>
+    <img src="../../../assets/images/delete_forever_black_24dp.svg" />
+  </button>
+</div>

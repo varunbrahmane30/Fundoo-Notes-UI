@@ -1,0 +1,41 @@
+.note {
+  margin-top: 30px;
+  height: 2000px;
+  margin-left: 120px;
+}
+.matcard {
+  margin: 10px;
+  width: 240px;
+  white-space: nowrap;
+  display: inline-block;
+}
+.title {
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.content {
+  overflow: hidden;
+  min-height: fit-content;
+}
+
+#checked {
+  margin-top: -29px;
+  margin-left: -34px;
+}
+
+.matcard:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.icon {
+  visibility: hidden;
+}
+.matcard:hover .icon {
+  visibility: visible;
+}
+.matcard:hover .hideme {
+  visibility: hidden;
+}
